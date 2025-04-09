@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://images8.alphacoders.com/115/1152056.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.container {
+  z-index: 1;
+  text-align: center;
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+  animation: fadeIn 1.2s ease-out;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-out;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  animation: slideIn 1s ease-out;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btn {
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-buy {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.btn-download {
+  background: linear-gradient(135deg, #1e90ff, #00bfff);
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 30px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
