@@ -4,6 +4,6 @@ function buyPremium() {
   }
   
   function downloadFree() {
-    window.location.href = 'https://disk.yandex.ru/d/2zIdFmaAg_0YBA'; // Укажите правильную ссылку для скачивания
+    window.location.href = 'https://disk.yandex.ru/d/ijMHfa7_aYk_CA'; // Укажите правильную ссылку для скачивания
   }
   a
